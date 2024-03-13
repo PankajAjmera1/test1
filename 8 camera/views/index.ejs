@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Camera List</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Camera List</h1>
+        <a href="/add" class="button-link">Add New Camera</a>
+        <div class="camera-list">
+            <% cameras.forEach(function(camera, index) { %>
+                <div class="camera-card">
+                    <span class="camera-number"><%= index + 1 %>.</span>
+                    <div class="camera-info">
+                        <p><%= camera.brand %> - <%= camera.cameraModel %></p>
+                        <div class="camera-actions">
+                            <a href="/edit/<%= camera._id %>" class="button-link">Edit</a> | 
+                            <a href="/delete/<%= camera._id %>" class="button-link delete" onclick="return confirm('Are you sure?');">Delete</a>
+                        </div>
+                    </div>
+                </div>
+            <% }); %>
+        </div>
+    </div>
+</body>
+</html>

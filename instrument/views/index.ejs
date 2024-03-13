@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Instruments List</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Instruments List</h1>
+        <a href="/instruments/new" class="button-link">Add New Instrument</a>
+        <ul class="instrument-list">
+            <% instruments.forEach(function(instrument) { %>
+                <li class="instrument-card">
+                    <%= instrument.brand %> - <%= instrument.instrumentName %> 
+                    (<a href="/instruments/<%= instrument._id %>" class="button-link">Show</a> | 
+                    <a href="/instruments/<%= instrument._id %>/edit" class="button-link">Edit</a> | 
+                    <form action="/instruments/<%= instrument._id %>?_method=DELETE" method="POST" style="display:inline">
+                        <button type="submit" class="button-link delete">Delete</button>
+                    </form>)
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shoes List</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Shoes List</h1>
+        <a href="/shoes/add" class="button-link">Add New Shoe</a>
+        <ul class="shoe-list">
+            <% shoes.forEach(function(shoe) { %>
+                <li class="shoe-card">
+                    <%= shoe.brand %> - <%= shoe.shoeModel %> 
+                    (<a href="/shoes/<%= shoe._id %>" class="button-link">Show</a> | 
+                    <a href="/shoes/<%= shoe._id %>/edit" class="button-link">Edit</a> | 
+                    <form action="/shoes/<%= shoe._id %>?_method=DELETE" method="POST" style="display:inline">
+                        <button type="submit" class="button-link delete">Delete</button>
+                    </form>)
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</body>
+</html>

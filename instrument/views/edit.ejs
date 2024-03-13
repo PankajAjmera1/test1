@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Instrument</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+<body>
+    <div class="card">
+        <h1>Edit Instrument</h1>
+        <form action="/instruments/<%= instrument._id %>?_method=PUT" method="POST">
+            
+            <div class="form-group">
+                <label for="type">Type:</label>
+                <input type="text" name="type" id="type" value="<%= instrument.type %>" required>
+            </div>
+            <div class="form-group">
+                <label for="brand">Brand:</label>
+                <input type="text" name="brand" id="brand" value="<%= instrument.brand %>" required>
+            </div>
+            <div class="form-group">
+                <label for="instrumentName">Instrument Name:</label>
+                <input type="text" name="instrumentName" id="instrumentName" value="<%= instrument.instrumentName %>" required>
+            </div>
+            <div class="form-group">
+                <label for="price">Price:</label>
+                <input type="number" name="price" id="price" value="<%= instrument.price %>" required>
+            </div>
+            <div class="form-group">
+                <label for="soundQuality">Sound Quality:</label>
+                <input type="text" name="soundQuality" id="soundQuality" value="<%= instrument.soundQuality %>" required>
+            </div>
+            <button type="submit" class="button-link">Update Instrument</button>
+        </form>
+        <a href="/instruments" class="button-link">Back to list</a>
+    </div>
+</body>
+</html>

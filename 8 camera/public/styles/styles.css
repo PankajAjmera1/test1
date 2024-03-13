@@ -1,0 +1,119 @@
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 20px;
+}
+
+.card {
+    background-color: white;
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.card h1 {
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-group button[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form-group button[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+/* New styles for edit and delete buttons */
+.button-link {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-right: 5px;
+}
+
+.button-link:hover {
+    background-color: #0056b3;
+}
+
+.button-link.delete {
+    background-color: #dc3545;
+}
+
+.button-link.delete:hover {
+    background-color: #c82333;
+}
+
+.camera-list {
+    list-style: none;
+    padding: 0;
+}
+
+.camera-card {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.camera-number {
+    font-weight: bold;
+    margin-right: 15px;
+}
+
+.camera-info {
+    flex-grow: 1;
+}
+
+.camera-actions a {
+    margin-right: 10px;
+}
+
+/* Enhancements for the existing .button-link styles for consistency */
+.button-link {
+    padding: 5px 15px;
+    font-size: 14px;
+}
+
+.button-link.delete {
+    background-color: #dc3545;
+}
+
+.button-link.delete:hover {
+    background-color: #c82333;
+}
